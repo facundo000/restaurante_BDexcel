@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Akshar';
+    src: url('../src/assets/fonts/Akshar-VariableFont_wght.ttf');
+}
+
+/* @import '~keen-slider/keen-slider.min.css';
+*
+{
+    padding: 0;
+    margin: 0;
+} */
+:root
+{
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: #fff;
+    --main-color: #323232;
+
+    --primary-color:#A20E28;
+    --secondary--color: rgb(255, 255, 255);
+    --background: rgb(243, 237, 228);
+    --hover-color: #9B9792;
+    --font: 'Akshar';
+}
+body
+{
+    height: 100rem;
+    font-family: var(--font);
+    background-color: var(--background);
+}
+a {
+    text-decoration: none !important;
+}
+
+/* @media (max-width: 768px) {
+    
+} */

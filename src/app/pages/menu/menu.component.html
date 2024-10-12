@@ -1,0 +1,21 @@
+<section>
+    <div class="row">
+        <h1 class="title">Menu</h1>
+        <article class="col-lg-4 art-1"  *ngFor="let menu of menus">
+            <figure class="foodbox mb-3">
+                <!-- <a [routerLink]="['/menu',menu.id]" style="margin-bottom: 4rem;"> -->
+                <div class="card">
+                    <!-- <div class="card-img"><div class="img"></div></div> -->
+                    <img [src]="getImageUrl(menu)" class="card-img" alt="{{menu.attributes.title}}" width="17rem" height="15rem">
+                    <div class="card-title">{{menu.attributes.title}}</div>
+                    <div class="card-subtitle">{{ menu.attributes.details }}</div>
+                    <hr class="card-divider">
+                    <div class="card-footer">
+                        <div class="card-price"><span>$</span> {{ menu.attributes.price }}</div>
+                    </div>
+                </div>
+                <!-- </a> -->
+            </figure>
+        </article>
+    </div>
+</section>

@@ -1,0 +1,29 @@
+.navbar {
+    background-color: var(--primary-color);
+}
+
+.nav-link,
+a {
+    color: var(--secondary--color);
+
+}
+
+.nav-link:hover, 
+.active-link{
+    color: var(--hover-color);
+}
+
+/* dropdown button*/
+.navbar-toggler {
+ border: none;
+ background-color: transparent;
+ padding: 0;
+ margin: 0;
+ box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1.5rem;
+    }
+}

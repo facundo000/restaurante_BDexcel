@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-sm navbar-expand-lg" > <!-- style="position: fixed; width: 100%;" -->
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="">Resto Logo</a>
+      <button class="navbar-toggler" type="button" 
+      (click)="toggleImage()"
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" 
+      aria-expanded="false" 
+      aria-label="Toggle navigation"
+      >
+        <span>
+          <svg *ngIf="showFirstImage" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+            <!-- First image SVG code here -->
+              <path fill="#ffffff" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+          </svg>
+          <svg *ngIf="!showFirstImage" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <!-- Second image SVG code here -->
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+          </svg>
+        </span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink=""  routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" >Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="menu" routerLinkActive="active-link">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="about" routerLinkActive="active-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="contact" routerLinkActive="active-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

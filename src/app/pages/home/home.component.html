@@ -1,0 +1,99 @@
+<header class="banner">
+    <app-slider></app-slider>
+</header>
+<!-- Welcome -->
+<section class="welcome col-lg-3">
+    <div class="text">
+        <h1 class="text-cont"> Welcome to [nombre del restaurante], the foodie paradise where taste buds dance in a flavor festival </h1>
+    </div>
+    <div class="networks">
+        <a href="#" target="_blank"><h4 class="networks-text">Instagram</h4></a>
+        <a href="#" target="_blank"><h4 class="networks-text">Facebook</h4></a>
+        <a href="#" target="_blank"><h4 class="networks-text">Pinterest</h4></a>
+    </div>
+</section>
+
+<!-- pedidosya -->
+<div class="cont-img">
+    <a href="#">
+        <div class="img"></div>
+    </a>
+</div>
+
+<!-- foodbox  -->
+<main class="mt-4 mb-4">
+    <h1 class="text-center">Customers <span class="highlight">Favourites Food</span></h1>
+
+    <div class="row">
+        <table>
+            <div class="foodbox" *ngFor="let menu of menus; let i = index">
+              <ng-container class="card" *ngIf="i === 0">
+                <span class="title">{{menu.attributes.title}}</span>
+                <img class="image" [src]="getImageUrl(menu)" alt="{{menu.attributes.title}}" width="17rem" height="15rem">
+                <span class="price">${{ menu.attributes.price }}</span>
+              </ng-container>
+              <ng-container class="card" *ngIf="i === 1">
+                <span class="title">{{menu.attributes.title}}</span>
+                <img class="image" [src]="getImageUrl(menu)" alt="{{menu.attributes.title}}" width="17rem" height="15rem">
+                <span class="price">${{ menu.attributes.price }}</span>
+              </ng-container>
+              <ng-container class="card" *ngIf="i === 2">
+                <span class="title">{{menu.attributes.title}}</span>
+                <img class="image" [src]="getImageUrl(menu)" alt="{{menu.attributes.title}}" width="17rem" height="15rem">
+                <span class="price">${{ menu.attributes.price }}</span>
+              </ng-container>
+
+            </div>
+        </table>
+    </div>
+    <a routerLink="menu" class="viewmorebtn">view menu <i class="bi bi-arrow-right"></i></a>
+</main>
+
+<!-- ubication -->
+<section class="ubication">
+    <div class="schedules">
+        <h2 class="mb-4">Opening Hours</h2>
+        <div class="days">
+            <h4 class="day">Mondey: 15:30 - 18:15</h4>
+            <h4 class="day">Tuesday: 15:30 - 18:15</h4>
+            <h4 class="day">Wednesday: 15:30 - 18:15</h4>
+            <h4 class="day">Thursday: 15:30 - 18:15</h4>
+            <h4 class="day">Friday: 15:30 - 18:15</h4>
+            <h4 class="day">Saturday: 15:30 - 18:15</h4>
+            <h4 class="day">Sunday: Closed</h4>
+    </div>
+    </div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d690.7126162915501!2d-64.29562151745996!3d-31.33756361854569!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1690408002900!5m2!1ses!2sar" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+</section>
+
+<!-- reviews  -->
+<section class="container mt-5 mb-5">
+    <h1 class="text-center">Reviws <span class="highlight">clients</span></h1>
+    <div class="row mt-5">
+        <!-- one  -->
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <h1>1</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto laudantium tempore officiis officia reprehenderit temporibus.</p>
+            </div>
+        </div>
+<!-- two -->
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <h1>2</h1>
+                <p>fill Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto laudantium tempore officiis officia reprehenderit temporibus.</p>
+            </div>
+        </div>
+        <!-- three  -->
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <h1>3</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto laudantium tempore officiis officia reprehenderit temporibus. your order delivered in minute.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
