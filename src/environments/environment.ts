@@ -5,13 +5,14 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyAHZy1eY1oBVeB2dpkQw7e2pEuu1yMl7Mg",
-    authDomain: "bd-resto-d7340.firebaseapp.com",
-    projectId: "bd-resto-d7340",
-    storageBucket: "bd-resto-d7340.appspot.com",
-    messagingSenderId: "221395190260",
-    appId: "1:221395190260:web:1010beab796cb7c80139a1",
-    measurementId: "G-652ZFEY313"
+    // apiKey: "AIzaSyAHZy1eY1oBVeB2dpkQw7e2pEuu1yMl7Mg",
+    apiKey: process.env['API_KEY'],
+    authDomain: process.env['AUTH_DOMAIN'],
+    projectId: process.env['PROJECT_ID'],
+    storageBucket: process.env['STORAGE_BUCKET'],
+    messagingSenderId: process.env['MESSAGING_SENDER_ID'],
+    appId: process.env['APP_ID'],
+    measurementId: process.env['MEASUREMENT_ID']
   }
 };
 

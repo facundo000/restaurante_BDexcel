@@ -12,14 +12,19 @@
 }
 
 body {
-    background-image: url(https://subtlepatterns.com/patterns/dark_wall.png);
-    background-repeat: repeat;
+    /* background-image: url(https://subtlepatterns.com/patterns/dark_wall.png);
+    background-repeat: repeat; */
     height: 500px;
     padding: 1px;
 }
 
 h1 { color: white }
 
+.slideshow{
+    
+    background-color: #9B9792;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 100 100'%3E%3Crect x='0' y='0' width='46' height='46' fill-opacity='0.68' fill='%23A20E28'/%3E%3C/svg%3E");
+}
 #slideshow-wrap {
     display: block;
     height: 320px;
@@ -39,7 +44,7 @@ h1 { color: white }
     height: 100%;
     background-color: rgb(0,0,0);
     overflow: hidden;
-    position: relative;
+    position: relative;    
 }
 
 #slideshow-inner>ul {
