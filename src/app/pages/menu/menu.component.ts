@@ -10,18 +10,14 @@ export class MenuComponent implements OnInit {
   
   menus: any[] = []
 
-  constructor(private service:OrderDetailsService) { }
-  foodData:any;
+  constructor(private sheetService: OrderDetailsService) { }
   ngOnInit(): void {
     // Details of food
-      this.service.getMenu().subscribe((response: any) => {
-        this.menus = response.data;
-        console.log(this.menus);
-      })
+      // this.sheetService.getMenu().subscribe((response: any) => {
+      //   this.menus = response;
+      // })
+      this.sheetService.getMenus().subscribe(data => {
+        this.menus = data;
+      });
   }
-
-  getImageUrl(menu: any): string {
-    return this.service.getImg(menu);
-  }
-
 }

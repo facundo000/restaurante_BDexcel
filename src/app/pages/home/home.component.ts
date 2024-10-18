@@ -9,17 +9,16 @@ import { OrderDetailsService } from 'src/app/services/order-details.service';
 export class HomeComponent implements OnInit {
 
   menus: any[] = []
+menu: any;
 
-  constructor(private service:OrderDetailsService) { }
+  constructor(private sheetService:OrderDetailsService) { }
 
   ngOnInit(): void {
-    this.service.getMenu().subscribe((response: any) => {
-      this.menus = response.data;
-    })
-  }
-
-  getImageUrl(menu: any): string {
-    return this.service.getImg(menu);
-  }
-
+    // this.sheetService.getMenu().subscribe((response: any) => {
+    //   this.menus = response;
+    // })
+    this.sheetService.getMenus().subscribe(data => {
+      this.menus = data;
+    });
+  }  
 }

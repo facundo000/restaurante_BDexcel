@@ -4,7 +4,7 @@
 <!-- Welcome -->
 <section class="welcome col-lg-3">
     <div class="text">
-        <h1 class="text-cont"> Welcome to [nombre del restaurante], the foodie paradise where taste buds dance in a flavor festival </h1>
+        <h1 class="text-cont"> Welcome to Resto, the foodie paradise where taste buds dance in a flavor festival </h1>
     </div>
     <div class="networks">
         <a href="#" target="_blank"><h4 class="networks-text">Instagram</h4></a>
@@ -25,27 +25,21 @@
     <h1 class="text-center">Customers <span class="highlight">Favourites Food</span></h1>
 
     <div class="row">
-        <table>
-            <div class="foodbox" *ngFor="let menu of menus; let i = index">
-              <ng-container class="card" *ngIf="i === 0">
-                <span class="title">{{menu.attributes.title}}</span>
-                <img class="image" [src]="getImageUrl(menu)" alt="{{menu.attributes.title}}" width="17rem" height="15rem">
-                <span class="price">${{ menu.attributes.price }}</span>
-              </ng-container>
-              <ng-container class="card" *ngIf="i === 1">
-                <span class="title">{{menu.attributes.title}}</span>
-                <img class="image" [src]="getImageUrl(menu)" alt="{{menu.attributes.title}}" width="17rem" height="15rem">
-                <span class="price">${{ menu.attributes.price }}</span>
-              </ng-container>
-              <ng-container class="card" *ngIf="i === 2">
-                <span class="title">{{menu.attributes.title}}</span>
-                <img class="image" [src]="getImageUrl(menu)" alt="{{menu.attributes.title}}" width="17rem" height="15rem">
-                <span class="price">${{ menu.attributes.price }}</span>
-              </ng-container>
+        <article class="col-lg-4 mt-2 mb-2" *ngFor="let menu of menus">
+            <figure class="foodbox mb-3" *ngIf="menu.title === 'Lasagna' || menu.title === 'Sushi'">
+                <div class="card"   >
+                    <img [src]="menu.imageUrl" class="card-img" [alt]="menu.title" width="17rem" height="15rem">
+                    <div class="card-title">{{menu.title}}</div>
+                    <div class="card-subtitle">{{ menu.description}}</div>
+                    <hr class="card-divider">
+                    <div class="card-footer">
+                        <div class="card-price"><span>$</span> {{ menu.price }}</div>
+                    </div>
+                </div>
+            </figure>
+        </article>          
+    </div>    
 
-            </div>
-        </table>
-    </div>
     <a routerLink="menu" class="viewmorebtn">view menu <i class="bi bi-arrow-right"></i></a>
 </main>
 
